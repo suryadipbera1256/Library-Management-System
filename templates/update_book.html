@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Update Book</h2>
+<form method="POST" action="{{ url_for('update_book', book_id=book.id) }}">
+    <label for="title">Title:</label><br />
+    <input type="text" id="title" name="title" value="{{ book.title }}" required /><br />
+    <label for="author">Author:</label><br />
+    <input type="text" id="author" name="author" value="{{ book.author }}" required /><br />
+    <label for="year">Year:</label><br />
+    <input type="text" id="year" name="year" maxlength="4" value="{{ book.year }}" /><br />
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" value="{{ book.email }}" /><br />
+    <label for="duration">Duration:</label><br />
+    <input type="text" id="duration" name="duration" value="{{ book.duration }}" /><br /><br />
+    <input type="submit" value="Update Book" />
+</form>
+{% endblock %}

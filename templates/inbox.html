@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Inbox - Overdue Books</h2>
+{% if overdue_books %}
+<table>
+    <thead>
+        <tr>
+            <th>Student/Teacher Name</th>
+            <th>Email</th>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Duration (days)</th>
+            <th>Added Date</th>
+            <th>Due Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in overdue_books %}
+        <tr>
+            <td>{{ book.student_teacher_name }}</td>
+            <td>{{ book.email }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.duration }}</td>
+            <td>{{ book.added_date.strftime("%Y-%m-%d %H:%M:%S") if book.added_date else '' }}</td>
+            <td>
+                {% if book.added_date and book.duration %}
+                    {{ (book.added_date + timedelta(days=book.duration|int)).strftime("%Y-%m-%d %H:%M:%S") }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No overdue books found.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e2f8ff;
+}
+
+header {
+    background: linear-gradient(90deg, #ffffff 0%, #6d73e1 100%);
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    margin: 0 0 10px 10px;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 1.2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-right: 1px;
+    font-weight: 700;
+    padding: 7px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffd700;
+}
+
+nav form {
+    display: flex;
+    align-items: center;
+}
+
+nav form input[type="text"] {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 14px;
+    width: 220px;
+    transition: box-shadow 0.3s ease;
+}
+
+nav form input[type="text"]:focus {
+    box-shadow: 0 0 8px #ffd700;
+}
+
+nav form button {
+    padding: 8px 16px;
+    background-color: #ffd700;
+    border: none;
+    color: #182848;
+    font-weight: 700;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav form button:hover {
+    background-color: #e6c200;
+}
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+table thead tr {
+    background-color: #ff3300;
+    color: black;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fffacd;
+}
+
+table tbody tr:hover {
+    background-color: #ffd700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.7);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #e0e7ff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+table {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.update-button {
+    background-color: #28a745;
+}
+
+.update-button:hover {
+    background-color: #1e7e34;
+}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Add New Book</h2>
+<form method="POST" action="{{ url_for('add_book') }}">
+    <label for="title">Title:</label><br />
+    <input type="text" id="title" name="title" required /><br />
+    <label for="author">Author:</label><br />
+    <input type="text" id="author" name="author" required /><br />
+    <label for="year">Year:</label><br />
+    <input type="text" id="year" name="year" maxlength="4" /><br />
+    <label for="student_teacher_name">Student/Teacher Name:</label><br />
+    <input type="text" id="student_teacher_name" name="student_teacher_name" /><br />
+    <label for="department_name">Department Name:</label><br />
+    <input type="text" id="department_name" name="department_name" /><br />
+    <label for="college_name">College Name:</label><br />
+    <input type="text" id="college_name" name="college_name" /><br />
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" /><br />
+    <label for="duration">Duration:</label><br />
+    <input type="text" id="duration" name="duration" /><br /><br />
+    <input type="submit" value="Add Book" />
+</form>
+{% endblock %}

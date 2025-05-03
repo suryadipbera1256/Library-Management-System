@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <header>
+        <img src="https://appexchange.salesforce.com/partners/servlet/servlet.FileDownload?file=00P3A00000kGyTnUAK" alt="Logo" class="logo" />
+        <h1>Library Management System</h1>
+        <nav>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}">Home</a> |
+                <a href="{{ url_for('add_book') }}">Add Book</a> |
+                <a href="{{ url_for('notify_overdue') }}" onclick="alert('Overdue notifications sent.'); return true;">Notify Overdue</a> |
+                <a href="{{ url_for('inbox') }}">Inbox</a>
+            </div>
+            <form method="get" action="{{ url_for('index') }}" style="display:inline; margin-left: 10px;">
+                <input type="text" name="q" placeholder="Search by title or author" value="{{ search_query }}">
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Library Management System made by Suryadip Bera</p>
+    </footer>
+</body>
+</html>
