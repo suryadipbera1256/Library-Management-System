@@ -1,6 +1,6 @@
 # Library Management System
 
-This is a simple Library Management System web application built with Flask and Flask-SQLAlchemy.
+This project is a Library Management System web application built using Flask and Flask-SQLAlchemy. It allows users to manage a collection of books by adding, updating, and deleting entries. The system supports searching for books by title or author and includes functionality to send automated email notifications to borrowers with overdue books. Users can view an inbox of overdue notifications within the app. The application features a responsive and styled user interface with navigation for easy access to different functionalities. It uses a SQLite database for data storage and integrates SMTP for email notifications. This project is suitable for educational purposes or small library management needs.y.
 
 ## Features
 
@@ -9,7 +9,8 @@ This is a simple Library Management System web application built with Flask and 
 - Send automated email notifications for overdue books.
 - View inbox of students who have overdue books.
 - Responsive and styled UI with a logo and navigation bar.
-
+## WEB APP
+![Screenshot 2025-05-03 155314](https://github.com/user-attachments/assets/a8af44b5-30f8-4af0-9505-cd0b8f9f3e27)
 ## Setup Instructions
 
 1. Clone the repository.
